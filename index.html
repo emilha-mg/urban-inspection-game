@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vistoria Urbana</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <main class="container">
+        <header class="cabecalho">
+            <h1>Vistoria Urbana 🔎</h1>
+            <p>
+                Encontre irregularidades urbanas e ajude a cuidar da cidade.
+            </p>
+        </header>
+
+        <section class="cartao" id="areaInicio">
+            <h2>Iniciar partida</h2>
+
+            <p>
+                Digite seu nome para começar a vistoria.
+            </p>
+
+            <label for="nomeJogador">Nome do jogador:</label>
+            <input type="text" id="nomeJogador" name="nomeJogador" placeholder="Digite seu nome" autocomplete="off">
+
+            <button type="button" id="botaoJogar">
+                Jogar
+            </button>
+        </section>
+
+        <section class="cartao oculto" id="areaJogo">
+            <div class="painel">
+                <div class="linha-status">
+                    <p>
+                        Rodada:
+                        <span id="rodadaAtual"></span>
+                    </p>
+
+                    <p>
+                        Nível:
+                        <span id="nivelAtual"></span>
+                    </p>
+                </div>
+
+                <div class="linha-status">
+                    <p>
+                        Pontuação:
+                        <span id="pontuacaoAtual"></span>
+                    </p>
+
+                    <p>
+                        Tempo:
+                        <span id="tempoAtual"></span>s
+                    </p>
+                </div>
+            </div>
+
+            <div class="orientacao">
+                <h2>Missão do fiscal</h2>
+                <p id="textoOrientacao"></p>
+            </div>
+
+            <div class="controles">
+                <button type="button" id="botaoLupa">
+                    🔎 Lupa de Fiscalização
+                </button>
+
+                <button type="button" id="botaoMaisTempo">
+                    ⏱️ Mais tempo
+                </button>
+            </div>
+
+            <div class="mensagem" id="mensagemJogo" aria-live="polite"></div>
+
+            <div class="grid-jogo" id="gridJogo" aria-label="Grade do jogo"></div>
+        </section>
+
+        <section class="cartao oculto" id="areaResultado">
+            <h2>Resultado final</h2>
+
+            <p id="resumoResultado"></p>
+
+            <button type="button" id="botaoJogarNovamente">
+                Jogar novamente
+            </button>
+        </section>
+
+        <section class="cartao">
+            <h2>Ranking local</h2>
+            <p>
+                Melhores pontuações:
+            </p>
+
+            <ol id="listaRanking">
+            </ol>
+        </section>
+    </main>
+</body>
+
+</html>
