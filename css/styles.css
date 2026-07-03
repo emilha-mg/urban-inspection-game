@@ -1,0 +1,256 @@
+/* 
+   Defini a estilização pensando no público-alvo: pessoa idosa e uso em celular.
+    * fontes simples
+    * fundo claro e letras escuras para melhor contraste
+    * botões grandes em verde quando disponíveis e em cinza quando indisponíveis
+    * responsividade para tela de celular
+*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f4f7;
+    color: #1f2933;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.container {
+    width: min(100%, 900px);
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.cabecalho {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.cabecalho h1 {
+    margin-bottom: 0.3rem;
+    font-size: 2.2rem;
+}
+
+.cabecalho p {
+    margin-top: 0;
+    font-size: 1.1rem;
+}
+
+.cartao {
+    background-color: #ffffff;
+    border: 2px solid #d0d7de;
+    border-radius: 14px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.cartao h2 {
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    border: 2px solid #8c9bab;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    padding: 0.9rem 1.2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: #198754;
+    color: #ffffff;
+}
+
+
+button:hover {
+    background-color: #146c43;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    background-color: #9aa6b2;
+    color: #ffffff;
+}
+
+.oculto {
+    display: none;
+}
+
+.painel {
+    background-color: #eaf2ff;
+    border: 2px solid #b6d4fe;
+    border-radius: 12px;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.linha-status {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.linha-status p {
+    margin: 0.3rem 0;
+    font-weight: bold;
+}
+
+.orientacao {
+    background-color: #fff8e1;
+    border: 2px solid #ffe08a;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.orientacao h2 {
+    margin-bottom: 0.4rem;
+}
+
+.orientacao p {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+.controles {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.controles button {
+    flex: 1;
+    min-width: 180px;
+}
+
+.mensagem {
+    min-height: 48px;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: #f6f8fa;
+    border: 2px solid #d0d7de;
+}
+
+.mensagem.sucesso {
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+    color: #0f5132;
+}
+
+.mensagem.erro {
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+    color: #842029;
+}
+
+.mensagem.aviso {
+    background-color: #fff3cd;
+    border-color: #ffecb5;
+    color: #664d03;
+}
+
+
+.grid-jogo {
+    display: grid;
+    gap: 0.7rem;
+    justify-content: center;
+}
+
+.celula {
+    width: 78px;
+    height: 78px;
+    font-size: 2.3rem;
+    background-color: #ffffff;
+    color: #1f2933;
+    border: 3px solid #34495e;
+    border-radius: 14px;
+}
+
+.ranking {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid #d0d7de;
+}
+
+.celula:hover {
+    background-color: #eaf2ff;
+}
+
+.celula.destaque-lupa {
+    background-color: #fff3cd;
+    border-color: #ff9800;
+    transform: scale(1.08);
+}
+
+#listaRanking {
+    padding-left: 1.5rem;
+}
+
+#listaRanking li {
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 17px;
+    }
+
+    .container {
+        padding: 0.7rem;
+    }
+
+    .cabecalho h1 {
+        font-size: 1.8rem;
+    }
+
+    .cartao {
+        padding: 0.9rem;
+    }
+
+    button {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .linha-status {
+        gap: 0.5rem;
+    }
+
+    .linha-status p {
+        width: 100%;
+    }
+
+    .controles {
+        flex-direction: column;
+    }
+
+    .celula {
+        width: 62px;
+        height: 62px;
+        font-size: 2rem;
+    }
+}
