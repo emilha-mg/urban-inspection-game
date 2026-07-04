@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Vistoria Urbana</title>
 
     <link rel="stylesheet" href="css/styles.css">
@@ -16,7 +15,7 @@
         <header class="cabecalho">
             <h1>Vistoria Urbana 🔎</h1>
             <p>
-                Encontre irregularidades urbanas e ajude a cuidar da cidade.
+                Encontre as irregularidades e ajude a cuidar da cidade.
             </p>
         </header>
 
@@ -33,6 +32,8 @@
             <button type="button" id="botaoJogar">
                 Jogar
             </button>
+
+            <p class="aviso-temporario oculto" id="mensagemInicio" aria-live="polite"></p>
         </section>
 
         <section class="cartao oculto" id="areaJogo">
@@ -40,25 +41,23 @@
                 <div class="linha-status">
                     <p>
                         Rodada:
-                        <span id="rodadaAtual"></span>
+                        <span id="rodadaAtual"></span>/15
                     </p>
 
                     <p>
                         Nível:
                         <span id="nivelAtual"></span>
                     </p>
-                </div>
 
-                <div class="linha-status">
                     <p>
                         Pontuação:
                         <span id="pontuacaoAtual"></span>
                     </p>
+                </div>
 
-                    <p>
-                        Tempo:
-                        <span id="tempoAtual"></span>s
-                    </p>
+                <div class="tempo-destaque" id="caixaTempo" aria-live="polite">
+                    ⏱️ Tempo:
+                    <span id="tempoAtual"></span>s
                 </div>
             </div>
 
@@ -77,7 +76,7 @@
                 </button>
             </div>
 
-            <div class="mensagem" id="mensagemJogo" aria-live="polite"></div>
+            <div class="aviso-temporario oculto" id="avisoJogo" aria-live="polite"></div>
 
             <div class="grid-jogo" id="gridJogo" aria-label="Grade do jogo"></div>
         </section>
@@ -88,20 +87,18 @@
             <p id="resumoResultado"></p>
 
             <div class="ranking">
-                <h2>Ranking</h2>
+                <h3>Ranking</h3>
                 <p>
                     Melhores pontuações:
                 </p>
 
-                <ol id="listaRanking">
-                </ol>
+                <ol id="listaRanking"></ol>
             </div>
 
             <button type="button" id="botaoJogarNovamente">
                 Jogar novamente
             </button>
         </section>
-
     </main>
 </body>
 
